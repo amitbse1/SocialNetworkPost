@@ -20,6 +20,7 @@ public class SocialNetworkPostServiceImpl implements com.h2.socialnetworkpost.se
 
 	private SocialNetworkPostRepository socialNetworkPostRepository;
 
+	
 	@PersistenceContext
 	private EntityManager entityManager;
 

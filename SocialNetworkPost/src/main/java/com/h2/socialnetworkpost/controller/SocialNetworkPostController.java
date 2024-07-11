@@ -23,6 +23,7 @@ import com.h2.socialnetworkpost.service.SocialNetworkPostService;
 @CrossOrigin(origins = "http://localhost:8082")
 public class SocialNetworkPostController {
 
+	
 	@Autowired
 	SocialNetworkPostService socialNetworkPostService;
 
