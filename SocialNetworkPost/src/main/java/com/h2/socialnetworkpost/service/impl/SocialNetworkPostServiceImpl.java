@@ -24,6 +24,7 @@ public class SocialNetworkPostServiceImpl implements com.h2.socialnetworkpost.se
 	@PersistenceContext
 	private EntityManager entityManager;
 
+	
 	@Autowired
 	public SocialNetworkPostServiceImpl(SocialNetworkPostRepository socialNetworkPostRepository,
 			EntityManager entityManager) {
