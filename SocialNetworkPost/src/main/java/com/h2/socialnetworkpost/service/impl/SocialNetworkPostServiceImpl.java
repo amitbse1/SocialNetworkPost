@@ -1,8 +1,8 @@
 package com.h2.socialnetworkpost.service.impl;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,7 +76,7 @@ public class SocialNetworkPostServiceImpl implements com.h2.socialnetworkpost.se
 		List<SocialNetworkPost> socialNetworkPostList = (List<SocialNetworkPost>) socialNetworkPostRepository.findAll();
 		List<SocialNetworkPost> SocialNetworkPostListResult = null;
 		if (socialNetworkPostList != null && !socialNetworkPostList.isEmpty()) {
-			SocialNetworkPostListResult = socialNetworkPostList.stream().limit(10).collect(Collectors.toList());
+			SocialNetworkPostListResult = socialNetworkPostList.stream().sorted(Comparator.comparing(obj -> obj.getPostCategory())).limit(10).collect(Collectors.toList());
 //					.collect(Collectors.groupingBy(SocialNetworkPost :: obj.getPostCategory()).
 //					collectingAndThen(toList(), l -> l.stream().limit(10).collect(toList()))); 
 			return SocialNetworkPostListResult;
