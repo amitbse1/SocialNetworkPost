@@ -21,7 +21,7 @@ import com.h2.socialnetworkpost.service.SocialNetworkPostService;
 @RestController
 @RequestMapping(path = "/api")
 @CrossOrigin(origins = "http://localhost:8082")
-public class CocialNetworkPostController {
+public class SocialNetworkPostController {
 
 	@Autowired
 	SocialNetworkPostService socialNetworkPostService;
